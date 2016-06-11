@@ -45,10 +45,11 @@ namespace WindowsFormsApplication1
             }
             int licznikZnalezionych = 0;
             var bezDuplikatow = Rejestry();
-            int ileZnalezionych = bezDuplikatow.Count;        
-           
-            //string sciezkaBazy = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
-            string sciezkaBazy = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\WFtests\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Database1.mdf; Integrated Security = True; Connect Timeout = 30";
+            int ileZnalezionych = bezDuplikatow.Count;
+
+            string sciezkaBazy = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
+            //string sciezkaBazy = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\WFtests\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Database1.mdf; Integrated Security = True; Connect Timeout = 30";
+
             using (SqlConnection polaczenieZBaza = new SqlConnection(sciezkaBazy))
             {
                 polaczenieZBaza.Open();
